@@ -16,7 +16,7 @@ contract ZombieFactory {
     } //end function createZombie()
 
     function _generateRandomDna(string _str) private view returns (uint) {
-        rand = uint(keccak256(abi.encodePacked(_str)));
-        
+        uint rand = uint(keccak256(abi.encodePacked(_str)));
+
     } //end function _generateRandomDna()
 } //end contract ZombieFactory {}
