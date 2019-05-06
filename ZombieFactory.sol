@@ -17,6 +17,6 @@ contract ZombieFactory {
 
     function _generateRandomDna(string _str) private view returns (uint) {
         uint rand = uint(keccak256(abi.encodePacked(_str)));
-
+        return rand % dnaModulus;
     } //end function _generateRandomDna()
 } //end contract ZombieFactory {}
