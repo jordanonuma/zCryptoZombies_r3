@@ -21,6 +21,7 @@ contract ZombieFactory {
     } //end function _generateRandomDna()
 
     function createRandomZombie(string _name) public {
-
+        uint randDna = _generateRandomDna(_name);
+        _createZombie(_name, randDna);
     } //end function createRandomZombie()
 } //end contract ZombieFactory {}
