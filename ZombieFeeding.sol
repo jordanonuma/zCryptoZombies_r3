@@ -1,5 +1,5 @@
 pragma solidity ^0.4.25;
-import "./ZombieFeeding.sol";
+import "./ZombieFactory.sol";
 
 contract ZombieFeeding is ZombieFactory {
 
