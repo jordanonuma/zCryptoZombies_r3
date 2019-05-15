@@ -9,6 +9,7 @@ contract ZombieFeeding is ZombieFactory {
     //sets this variable to be equal to index _zombieId in our zombies[] array.
     Zombie storage myZombie = zombies[_zombieId];
     _targetDna = _targetDna % dnaModulus;   
+    uint newDna = (myZombie.dna + _targetDna)/2;
   } //end function feedAndMultiply()
 
 } //end contract ZombieFeeding {}
