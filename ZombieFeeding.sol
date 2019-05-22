@@ -17,7 +17,7 @@ contract KittyInterface {
 } //end contract KittyInterface {}
 
 contract ZombieFeeding is ZombieFactory {
-  uint kittyContract;
+  KittyInterface kittyContract;
   // deprecated below line in favor of allowing 'kittyContract' to be set by user.
   // KittyInterface kittyContract = KittyInterface(ckAddress);
   function setKittyContractAddress(address _address) external {
