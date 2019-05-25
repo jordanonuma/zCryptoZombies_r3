@@ -9,6 +9,8 @@ contract ZombieFactory is Ownable {
     struct Zombie {
         string name;
         uint dna;
+        uint32 level;
+        uint32 readyTime;
     } //end struct Zombie{}
 
     Zombie[] public zombies; //public array 'zombies' of Zombie[] structs
