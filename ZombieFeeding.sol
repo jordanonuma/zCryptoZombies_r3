@@ -44,6 +44,7 @@ contract ZombieFeeding is ZombieFactory {
         newDna = newDna - newDna % 100 + 99;
     } //end if(zombie was previously a kitty)
     _createZombie("NoName", newDna);
+    _triggerCooldown(myZombie);
   } //end function feedAndMultiply()
 
   function feedOnKitty(uint _zombieId, uint _kittyId) internal {
@@ -53,4 +54,3 @@ contract ZombieFeeding is ZombieFactory {
   } //end function feedOnKitty()
 
 } //end contract ZombieFeeding {}
-
