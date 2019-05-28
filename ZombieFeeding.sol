@@ -37,6 +37,7 @@ contract ZombieFeeding is ZombieFactory {
     //Declares a local Zombie[] named 'myZombie' (which will be a storage pointer) and
     //sets this variable to be equal to index _zombieId in our zombies[] array.
     Zombie storage myZombie = zombies[_zombieId];
+    require(_isReady(myZombie));
     _targetDna = _targetDna % dnaModulus;   
     uint newDna = (myZombie.dna + _targetDna)/2;
     if (keccak256(abi.encodePacked(_species)) == keccak256(abi.encodePacked("kitty"))) {
@@ -45,7 +46,7 @@ contract ZombieFeeding is ZombieFactory {
     _createZombie("NoName", newDna);
   } //end function feedAndMultiply()
 
-  function feedOnKitty(uint _zombieId, uint _kittyId) public {
+  function feedOnKitty(uint _zombieId, uint _kittyId) internal {
     uint kittyDna;
     (,,,,,,,,,kittyDna) = kittyContract.getKitty(_kittyId);
     feedAndMultiply(_zombieId, kittyDna, "kitty");
