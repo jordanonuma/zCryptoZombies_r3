@@ -8,4 +8,8 @@ contract ZombieHelper is ZombieFeeding {
    require(zombies[_zombieId].level >= _level);
    _; 
   } //end modifier aboveLevel()
+
+  function changeName(uint _zombieId, string _newName) external aboveLevel(2, _zombieId) {
+    
+  } //end function changeName()
 } //end contract ZombieHelper {}
