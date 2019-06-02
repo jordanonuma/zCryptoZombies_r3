@@ -23,7 +23,9 @@ contract ZombieHelper is ZombieFeeding {
     uint[] memory result = new uint[](ownerZombieCount[_owner]);
     uint counter = 0;
     for (uint i = 0; i < zombies.length ; i++) {
-      
+        if (zombieToOwner[i] == _owner) {
+        
+        } //end if()
     } end for()
     return result;
   } //end function getZombiesByOwner()
