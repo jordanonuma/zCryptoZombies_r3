@@ -12,7 +12,7 @@ contract ZombieHelper is ZombieFeeding {
   } //end modifier aboveLevel()
   
   function levelUp(uint _zombieId) external payable {
-    
+    require(msg.value == levelUpFee);
   } //end function levelUp()
 
   function changeName(uint _zombieId, string _newName) external aboveLevel(2, _zombieId) {
