@@ -11,9 +11,13 @@ contract ZombieHelper is ZombieFeeding {
    _; 
   } //end modifier aboveLevel()
 
-  function withdraw() external onlyOnwer {
+  function withdraw() external onlyOwner {
     
   } //end function withdraw()
+
+  function setLevelUpFee(uint _fee) external onlyOwner {
+
+  } //end function setLevelUpFee()
   
   function levelUp(uint _zombieId) external payable {
     require(msg.value == levelUpFee);
