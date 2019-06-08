@@ -17,9 +17,15 @@ contract KittyInterface {
 } //end contract KittyInterface {}
 
 contract ZombieFeeding is ZombieFactory {
-  KittyInterface kittyContract;
   // deprecated below line in favor of allowing 'kittyContract' to be set by user.
   // KittyInterface kittyContract = KittyInterface(ckAddress);
+  KittyInterface kittyContract;
+
+  modifier ownerOf(uint _zombieId) {
+    require(msg.sender == zombieToOwner[_zombieId]);
+    _;
+  } //end modifier ownerOf()
+
   function setKittyContractAddress(address _address) external onlyOwner {
     kittyContract = KittyInterface(_address);
   } //end function setKittyContractAddress()
