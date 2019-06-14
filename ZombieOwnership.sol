@@ -1,4 +1,4 @@
-pragma solidity ^06.2.25;
+pragma solidity ^0.4.25;
 import "./zombieattack.sol";
 
 contract ZombieOwnership is ZombieAttack {
