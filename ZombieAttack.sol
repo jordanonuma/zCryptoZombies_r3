@@ -1,7 +1,8 @@
 pragma solidity ^0.4.25;
 import "./zombiehelper.sol";
+import "./erc721.sol";
 
-contract ZombieAttack is ZombieHelper {
+contract ZombieAttack is ZombieHelper, ERC721 {
   uint randNonce = 0;
   uint attackVictoryProbability = 70;
 
