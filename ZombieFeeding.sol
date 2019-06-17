@@ -38,7 +38,7 @@ contract ZombieFeeding is ZombieFactory {
     return (_zombie.readyTime <= now);
   } //end function _isReady()
 
-  function feedAndMultiply(uint _zombieId, uint _targetDna, string _species) internal ownerOf(_zombieId) {
+  function feedAndMultiply(uint _zombieId, uint _targetDna, string _species) internal onlyOwnerOf(_zombieId) {
     //Declares a local Zombie[] named 'myZombie' (which will be a storage pointer) and
     //sets this variable to be equal to index _zombieId in our zombies[] array.
     Zombie storage myZombie = zombies[_zombieId];
