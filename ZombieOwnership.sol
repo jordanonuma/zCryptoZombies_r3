@@ -10,6 +10,10 @@ contract ZombieOwnership is ZombieAttack {
       return zombieToOwner[_tokenId];
   } //end function ownerOf()
 
+  function _transfer(address _from, address _to, uint256 _tokenId) private {
+      
+  } //end function _transfer()
+
   function transferFrom(address _from, address _to, uint256 _tokenId) external payable {
 
   } //end function transferFrom()
