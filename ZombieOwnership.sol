@@ -14,7 +14,7 @@ contract ZombieOwnership is ZombieAttack {
     ownerZombieCount[_to]++;
     ownerZombieCount[_from]--;
     zombieToOwner[_tokenId] = _to;
-    event Transfer(_from, _to, _tokenId);
+    emit Transfer(_from, _to, _tokenId);
   } //end function _transfer()
 
   function transferFrom(address _from, address _to, uint256 _tokenId) external payable {
