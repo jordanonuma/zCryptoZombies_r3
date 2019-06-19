@@ -2,6 +2,8 @@ pragma solidity ^0.4.25;
 import "./zombieattack.sol";
 
 contract ZombieOwnership is ZombieAttack {
+  mapping (uint => address) zombieApprovals;
+
   function balanceOf(address _owner) external view returns (uint256) {
       return ownerZombieCount[_owner];
   } //end function balanceOf()
