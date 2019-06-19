@@ -21,6 +21,7 @@ contract ZombieOwnership is ZombieAttack {
 
   function transferFrom(address _from, address _to, uint256 _tokenId) external payable {
     require(_from == zombieApprovals[_tokenId]);
+    _transfer(_from, _to, _tokenId);
   } //end function transferFrom()
 
   function approve(address _approved, uint256 _tokenId) external payable {
