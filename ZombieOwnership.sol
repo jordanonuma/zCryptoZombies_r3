@@ -20,7 +20,7 @@ contract ZombieOwnership is ZombieAttack {
   } //end function _transfer()
 
   function transferFrom(address _from, address _to, uint256 _tokenId) external payable {
-
+    require(_from == zombieApprovals[_tokenId]);
   } //end function transferFrom()
 
   function approve(address _approved, uint256 _tokenId) external payable {
