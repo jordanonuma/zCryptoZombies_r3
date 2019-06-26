@@ -1,5 +1,7 @@
 pragma solidity ^0.4.25;
 import "./zombieattack.sol";
+import "./erc721.sol";
+import "./safemath.sol";
 
 // @title Zombie ownership contract that uses basic math operations
 // @author H4XF13LD MORRIS 💯💯😎💯💯
