@@ -1,6 +1,10 @@
 pragma solidity ^0.4.25;
 import "./zombieattack.sol";
 
+// @title Zombie ownership contract that uses basic math operations
+// @author H4XF13LD MORRIS 💯💯😎💯💯
+// @notice For now, this contract just adds a multiply function
+
 contract ZombieOwnership is ZombieAttack {
   mapping (uint => address) zombieApprovals;
 
