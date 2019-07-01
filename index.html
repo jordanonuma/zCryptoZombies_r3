@@ -20,7 +20,7 @@
                     if (web3.eth.accounts[0] !== userAccount) {
                         userAccount = web3.eth.accounts[0];
                         // Call some function to update the UI with the new account
-                        cryptoZombies.methods.getZombiesByOwner(userAccount).call();
+                        getZombiesByOwner(userAccount);
                     }
                 }, 100);
             } //end function startApp()
