@@ -73,7 +73,7 @@
                 return cryptoZombies.methods.feedOnKitty(zombieId, kittyId)
                 .send({ from: userAccount })
                 .on("receipt", function(receipt) {
-                $("#txStatus").text("Ate a kitty and spawned a new Zombie!" + name + "!");
+                $("#txStatus").text("Ate a kitty and spawned a new Zombie!");
                 // Transaction was accepted into the blockchain, let's redraw the UI
                 getZombiesByOwner(userAccount).then(displayZombies);
                 })
