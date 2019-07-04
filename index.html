@@ -90,6 +90,9 @@
                 .on("receipt", function(receipt) {
                     $("#txStatus").text("Power overwhelming! Zombie successfully leveled up");
                 })
+                .on("error", function(error) {
+                  $("#txStatus").text(error);
+                });
             } //end function levelUp()
 
             function getZombieDetails(id) {
