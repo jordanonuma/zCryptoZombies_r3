@@ -30,6 +30,8 @@
                 .on("data", function(event){
                 let data = event.returnValues;
 
+                //updates UI
+                getZombiesByOwner(userAccount).then(displayZombies);
                 }).on("error", console.error);
             } //end function startApp()
 
