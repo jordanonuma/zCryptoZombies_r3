@@ -10,5 +10,9 @@ contract ExampleGame is ZBGameMode  {
 
         ZBSerializer.SerializedGameStateChanges memory changes;
         changes.init();        
+
+        //changes both players defense levels to 15
+        changes.changePlayerDefense(Player.Player1, 15);
+        changes.changePlayerDefense(Player.Player2, 15);
     } //end function beforeMatchStart()
 } //end contract ExampleGame {}
