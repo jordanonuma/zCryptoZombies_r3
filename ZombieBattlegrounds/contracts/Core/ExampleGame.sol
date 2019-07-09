@@ -19,8 +19,12 @@ contract ExampleGame is ZBGameMode  {
         changes.changePlayerCurrentGooVials(Player.Player1, 3);
         changes.changePlayerCurrentGooVials(Player.Player2, 3);
 
-        //changes both players filled goo vials to 3
+        //changes both players' starting filled goo vials to 3
         changes.changePlayerCurrentGoo(Player.Player1, 3);
         changes.changePlayerCurrentGoo(Player.Player2, 3);
+
+        //changes both players' starting max goo vials to 8
+        changes.changePlayerMaxGooVials(Player.Player1, 8);
+        changes.changePlayerMaxGooVials(Player.Player2, 8);
     } //end function beforeMatchStart()
 } //end contract ExampleGame {}
