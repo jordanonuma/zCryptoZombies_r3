@@ -5,6 +5,10 @@ import "./ZB/ZBGameMode.sol";
 contract ExampleGame is ZBGameMode  {
     mapping (string => bool) internal bannedCards;
 
+    constructor() public {
+        
+    } //end constructor()
+
     function beforeMatchStart(bytes serializedGameState) external {
         GameState memory gameState;
         gameState.init(serializedGameState);
