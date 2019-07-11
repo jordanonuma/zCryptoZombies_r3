@@ -54,4 +54,8 @@ contract ExampleGame is ZBGameMode  {
         changes.changePlayerMaxGooVials(Player.Player1, 8);
         changes.changePlayerMaxGooVials(Player.Player2, 8);
     } //end function beforeMatchStart()
+
+    for (uint i = 0; i < gameState.playerStates.length; i++) {
+            
+    } //end for (){}
 } //end contract ExampleGame {}
