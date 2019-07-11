@@ -56,7 +56,7 @@ contract ExampleGame is ZBGameMode  {
     } //end function beforeMatchStart()
 
     for (uint i = 0; i < gameState.playerStates.length; i++) {
-        CardInstances[] memory newCards = newCards[](gameState.playerStates[i].cardsInDeck.length);
+        CardInstance[] memory newCards = new CardInstance[](gameState.playerStates[i].cardsInDeck.length);
         uint cardCount = 0;
     } //end for (){}
 } //end contract ExampleGame {}
