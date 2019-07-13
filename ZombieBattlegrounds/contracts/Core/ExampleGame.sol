@@ -66,7 +66,7 @@ contract ExampleGame is ZBGameMode  {
         } //end for (i){}
     } //end function beforeMatchStart()
 
-    function isLegalCard(CardInstance[] card) returns (bool) internal view {
+    function isLegalCard(CardInstance card) internal view returns(bool) {
         return (!bannedCards[card.mouldName]);
     } //end function isLegalCard()
 } //end contract ExampleGame {}
