@@ -15,5 +15,5 @@ contract Munchkin is ZBGameMode  {
         // Custom game logic will go here
 
         changes.emit();
-    }
-}
+    }  //end function beforeMatchStart()
+} //end contract Munchkin {}
