@@ -2,7 +2,7 @@ pragma solidity 0.4.25;
 
 import "./ZB/ZBGameMode.sol";
 
-contract Munchkin is ZBGameMode  {
+contract Singleton is ZBGameMode  {
 
     function beforeMatchStart(bytes serializedGameState) external {
 
@@ -31,4 +31,4 @@ contract Munchkin is ZBGameMode  {
     function isLegalCard(CardInstance card) internal view returns(bool) {
         return (card.gooCost <= 2);
     } //end function isLegalCard()
-} //end contract Munchkin {}
+} //end contract Singleton {}
