@@ -12,10 +12,11 @@ contract ZombiePile is ZBGameMode  {
         ZBSerializer.SerializedGameStateChanges memory changes;
         changes.init();
 
-        for (uint i = 0; i < gameState.playerStates.length; i++) {
-            CardInstance[] memory newCards = new CardInstance[](gameState.playerStates[i].cardsInDeck.length);
-            uint cardCount = 0;
+        CardInstance[] memory player1Cards = new CardInstance[](gameState.playerStates[0].cardsInDeck.length);
+        CardInstance[] memory player2Cards = new CardInstance[](gameState.playerStates[1].cardsInDeck.length);
+        uint cardCount = 0;
 
+        for (uint i = 0; i < gameState.playerStates.length; i++) {
             for (uint j = 0; j < gameState.playerStates[i].cardsInDeck.length; j++) {
                 bool cardAlreadyInDeck = false;
                 for (uint k = 0; k < cardCount; k++) {
@@ -34,4 +35,4 @@ contract ZombiePile is ZBGameMode  {
 
         changes.emit();
     }  //end function beforeMatchStart()
-} //end contract Singleton {}
+} //end contract ZombiePile {}
