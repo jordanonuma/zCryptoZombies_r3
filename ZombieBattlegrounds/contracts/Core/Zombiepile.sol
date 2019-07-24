@@ -35,8 +35,8 @@ contract ZombiePile is ZBGameMode  {
                     player2CardCount++;                    
                 } //end else{}
             } //end for(j){}
-            changes.changePlayerCardsInDeck(Player(i), newCards, cardCount);
         } //end for(i){}
+        changes.changePlayerCardsInDeck(Player1, player1Cards, player1CardCount);
 
         changes.emit();
     }  //end function beforeMatchStart()
