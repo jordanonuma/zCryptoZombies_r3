@@ -1,4 +1,8 @@
-pragma solidity ^0.4.24;
+// This file is here for your reference, but doesn't contain all the imports necessary
+// to compile. You can find a repo with all the final files at:
+// https://github.com/loomnetwork/zb_game_mode
+
+pragma solidity ^0.4.25;
 
 import "./ZBEnum.sol";
 import "./ZBGameMode.sol";
